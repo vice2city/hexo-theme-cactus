@@ -30,6 +30,9 @@
       <% } %>
     </p>
   <% } %>
+  <% if (theme.sublink) { %>
+    <span class="h3"><a href="<%- url_for(theme.sublink) %>">游戏履历</a></span>
+  <% } %>
 </section>
 
 <section id="writing">
@@ -58,6 +61,7 @@
   <% if (theme.posts_overview.show_all_posts) { %>
     <%- partial('_partial/pagination') %>
   <% } %>
+  <span class="h3"><a href="<%- url_for(theme.nav.articles) %>">查看全部</a></span>
 </section>
 
 <% if (site.data.projects) { %>
